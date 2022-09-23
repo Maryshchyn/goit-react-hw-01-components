@@ -2,8 +2,9 @@ import user from '../user.json';
 import Profile from '../components/Profile/Profile';
 
 import { Title } from './Statistics/title/Title';
-import { Stats } from './Statistics/stats/Stats';
+// import { Stats } from './Statistics/stats/Stats';
 import data from '../data.json';
+import {StatsBoard} from './Statistics/StatsBoard/StatsBoard'
 
 export const App = () => {
   return (
@@ -18,7 +19,7 @@ export const App = () => {
   likes={user.stats.likes}
       />
       <Title title="Upload stats"/>
-      <Stats events={data}/>
+      <StatsBoard stats={data} />
     </div>)
     
 };
