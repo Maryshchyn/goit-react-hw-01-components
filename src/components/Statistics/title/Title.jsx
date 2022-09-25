@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 
 
 export const Title = ({ title }) => {
-    return <section className="statistics">
-  <h2 className="title">{title}</h2></section>
+    return (<h2 className="title">{title}</h2>)
 }
 
 Title.propTypes = {
