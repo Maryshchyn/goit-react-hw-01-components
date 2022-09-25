@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
-import {Stats} from '../stats/Stats'
+import { Stats } from '../stats/Stats';
+import {Title} from '../title/Title'
 
 export const StatsBoard = ({ stats }) => {
     console.log(stats)
-    return <div>
+    return <section class="statistics"><Title />
         {stats.map(({id, label, percentage}) => (
         <Stats
                 key={id}
                 label={label}
                 percentage={percentage} />
+            
         ))}
-    </div>
+    </section>
 }
 
 StatsBoard.propTypes = {
