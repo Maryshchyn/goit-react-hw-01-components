@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { Stats } from '../stats/Stats';
-import {Title} from '../title/Title'
+
 
 export const StatsBoard = ({ stats }) => {
     console.log(stats)
-    return <section class="statistics"><Title />
+    return <section className="statistics">
+       
         {stats.map(({id, label, percentage}) => (
         <Stats
                 key={id}

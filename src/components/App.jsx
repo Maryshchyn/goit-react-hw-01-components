@@ -26,6 +26,7 @@ export const App = () => {
   views={user.stats.views}
   likes={user.stats.likes}
       />
+      
       <Title title="Upload stats" stats={data}/>
       <StatsBoard stats={data} />
 

@@ -1,33 +1,48 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileProf,
+  ProfileDescription,
+  ProfileAvatar,
+  ProfileName,
+  ProfileTag,
+  ProfileLocation,
+  ProfileLi,
+  ProfileLabel,
+  ProfileQuantity,
+  ProfileStats,
+} from './Profile.styled';
+// import css from '../Profile/Profile.module.css';
 
 export default function Profile({ avatar, username, tag, location, followers, views, likes }) {
-  return <div className="profile">
-  <div className="description">
-    <img
+  return (
+    <ProfileProf className="profile">
+  <ProfileDescription className="description">
+    <ProfileAvatar
       src={avatar}
       alt="User avatar"
       className="avatar"
     />
-    <p className="name">{username}</p>
-    <p className="tag">{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+    <ProfileName className="name">{username}</ProfileName>
+    <ProfileTag className="tag">@{tag}</ProfileTag>
+    <ProfileLocation className="location">{location}</ProfileLocation>
+  
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
-    </li>
-  </ul>
-</div>
+  <ProfileStats className="stats">
+    <ProfileLi>
+      <ProfileLabel className="label">Followers</ProfileLabel>
+      <ProfileQuantity className="quantity">{followers}</ProfileQuantity>
+    </ProfileLi>
+    <ProfileLi>
+      <ProfileLabel className="label">Views</ProfileLabel>
+      <ProfileQuantity className="quantity">{views}</ProfileQuantity>
+    </ProfileLi>
+    <ProfileLi>
+      <ProfileLabel className="label">Likes</ProfileLabel>
+      <ProfileQuantity className="quantity">{likes}</ProfileQuantity>
+    </ProfileLi>
+        </ProfileStats>
+        </ProfileDescription>
+</ProfileProf>)
 }
 
 Profile.propTypes ={

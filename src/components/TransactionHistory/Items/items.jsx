@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const Items = ({ transaction: type, amount, currency }) => {
+export const Items = ({type, amount, currency }) => {
     return (
     <>
       <td>{type}</td>
