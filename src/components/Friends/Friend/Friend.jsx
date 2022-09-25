@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
+import {FriendStatus, FriendAvatar, FriendName} from './Friend.styled.js';
 
 export const FriendList = ({friend:{avatar, name, isOnline}}) => {
    
     return (
-        <><span className="status">{isOnline ? 'yes' : 'nou'}</span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-       <p className="name">{name}</p>
+        <><FriendStatus className="status">{isOnline ? 'yes' : 'nou'}</FriendStatus>
+  <FriendAvatar className="avatar" src={avatar} alt="User avatar" width="48" />
+       <FriendName className="name">{name}</FriendName>
        </>)
 
 
 }
 
 FriendList.propTypes = {
-    friend:PropTypes.exact({
+    friend:PropTypes.shape({
         avatar: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         isOnline: PropTypes.bool.isRequired,
