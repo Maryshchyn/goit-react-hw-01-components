@@ -1,27 +1,35 @@
 import PropTypes from 'prop-types';
 import { Items } from '../Items/items'
+import {
+    FriendListTable,
+    FriendThead,
+    FriendTr,
+    FriendListTh,
+    FriendListTbody,
+    FriendListTr
+} from './TransactionHistory.styled'
 
 export const TransactionHistory = ({transactions}) =>{
     return (
-        <table className="transaction-history">
-             <thead>
-        <tr>
-            <th>Type</th>
-            <th>Amount</th>
-           <th>Currency</th>
-         </tr>
-            </thead>
+        <FriendListTable className="transaction-table">
+             <FriendThead>
+        <FriendTr>
+            <FriendListTh>Type</FriendListTh>
+            <FriendListTh>Amount</FriendListTh>
+           <FriendListTh>Currency</FriendListTh>
+         </FriendTr>
+            </FriendThead>
 
-            <tbody>{transactions.map(transaction => (
-                <tr key={transaction.id}>
+            <FriendListTbody>{transactions.map(transaction => (
+                <FriendListTr key={transaction.id}>
                     <Items 
                         type={transaction.type}
                         amount={transaction.amount}
                         currency={transaction.currency}
                     />
-                    </tr>
-                ))}</tbody>
-            </table>
+                    </FriendListTr>
+                ))}</FriendListTbody>
+            </FriendListTable>
     )
 }
 TransactionHistory.propTypes = {

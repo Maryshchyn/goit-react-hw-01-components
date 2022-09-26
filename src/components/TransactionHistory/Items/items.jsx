@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { FriendListTd } from './item.sryled';
 
 export const Items = ({type, amount, currency }) => {
     return (
     <>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <FriendListTd>{type}</FriendListTd>
+      <FriendListTd>{amount}</FriendListTd>
+      <FriendListTd>{currency}</FriendListTd>
     </>
     )
 }

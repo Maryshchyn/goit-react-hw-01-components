@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import {FriendStatus, FriendAvatar, FriendName} from './Friend.styled.js';
+import { FriendStatus, FriendAvatar, FriendName } from './Friend.styled.js';
+import cssIsOnline from './Friend.module.css';
 
 export const FriendList = ({friend:{avatar, name, isOnline}}) => {
    
     return (
-        <><FriendStatus className="status">{isOnline ? 'yes' : 'nou'}</FriendStatus>
+        <><FriendStatus className={isOnline ? `${cssIsOnline.si}`:`${cssIsOnline.no}`}></FriendStatus>
   <FriendAvatar className="avatar" src={avatar} alt="User avatar" width="48" />
        <FriendName className="name">{name}</FriendName>
        </>)
