@@ -6,6 +6,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 list-style: none;
+padding-top: 150px;
 `;
 export const FriendItem = styled.li`
 margin-bottom: 15px;
