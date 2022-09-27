@@ -1,7 +1,7 @@
 import user from '../user.json';
 import Profile from '../components/Profile/Profile';
 
-import { Title } from './Statistics/title/Title';
+// import { Title } from './Statistics/title/Title';
 import data from '../data.json';
 import {StatsBoard} from './Statistics/StatsBoard/StatsBoard'
 
@@ -18,17 +18,15 @@ export const App = () => {
   return (
     <div>
       <Profile
-  avatar={user.avatar}
-  username={user.username}
-  location={user.location}
-  tag={user.tag}
-  followers={user.stats.followers}
-  views={user.stats.views}
-  likes={user.stats.likes}
+        avatar={user.avatar}
+        username={user.username}
+        location={user.location}
+        tag={user.tag}
+         stats={user.stats}
       />
       
-      <Title title="Upload stats" stats={data}/>
-      <StatsBoard stats={data} />
+      <StatsBoard title="Upload stats" stats={data}/>
+      
 
       <FriendListItem friends={friends} />
 

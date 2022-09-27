@@ -13,7 +13,7 @@ import {
 } from './Profile.styled';
 // import css from '../Profile/Profile.module.css';
 
-export default function Profile({ avatar, username, tag, location, followers, views, likes }) {
+export default function Profile({ avatar, username, tag, location, stats  }) {
   return (
     <ProfileProf className="profile">
   <ProfileDescription className="description">
@@ -30,15 +30,15 @@ export default function Profile({ avatar, username, tag, location, followers, vi
   <ProfileStats className="stats">
     <ProfileLi>
       <ProfileLabel className="label">Followers</ProfileLabel>
-      <ProfileQuantity className="quantity">{followers}</ProfileQuantity>
+      <ProfileQuantity className="quantity">{stats.followers}</ProfileQuantity>
     </ProfileLi>
     <ProfileLi>
       <ProfileLabel className="label">Views</ProfileLabel>
-      <ProfileQuantity className="quantity">{views}</ProfileQuantity>
+      <ProfileQuantity className="quantity">{stats.views}</ProfileQuantity>
     </ProfileLi>
     <ProfileLi>
       <ProfileLabel className="label">Likes</ProfileLabel>
-      <ProfileQuantity className="quantity">{likes}</ProfileQuantity>
+      <ProfileQuantity className="quantity">{stats.likes}</ProfileQuantity>
     </ProfileLi>
         </ProfileStats>
         </ProfileDescription>

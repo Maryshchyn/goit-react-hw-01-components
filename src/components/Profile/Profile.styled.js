@@ -25,13 +25,11 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 export const ProfileAvatar = styled.img`
 border-radius: 80%;
   padding-top: 100px;
-  margin: 0 auto;
   width: 300px;
 `;
 export const ProfileName = styled.p`
 font-size: 25px;
 font-weight: bolder;
-margin: 0;
 margin-top: 40px;
 `;
 export const ProfileTag = styled.p`
