@@ -6,8 +6,8 @@ import {StatsStatistics, TitleTitle} from './StatsBoard.styled'
 export const Statistics = ({title, stats }) => {
     console.log(stats)
     return (
-        <section class="statistics">
-            <TitleTitle class="title">{ title}</TitleTitle>
+        <section className="statistics">
+            <TitleTitle className="title">{ title}</TitleTitle>
         
         <StatsStatistics className="statistics">
        
