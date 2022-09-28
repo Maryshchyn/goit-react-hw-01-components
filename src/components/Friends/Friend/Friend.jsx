@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FriendStatus, FriendAvatar, FriendName } from './Friend.styled.js';
 import cssIsOnline from './Friend.module.css';
 
-export const FriendList = ({friend:{avatar, name, isOnline}}) => {
+export const FriendList = ({avatar, name, isOnline}) => {
    
     return (
         <><FriendStatus className={isOnline ? `${cssIsOnline.si}`:`${cssIsOnline.no}`}></FriendStatus>

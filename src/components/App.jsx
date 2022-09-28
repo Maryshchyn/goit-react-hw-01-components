@@ -1,9 +1,9 @@
 import user from '../user.json';
 import Profile from '../components/Profile/Profile';
 
-// import { Title } from './Statistics/title/Title';
+
 import data from '../data.json';
-import {StatsBoard} from './Statistics/StatsBoard/StatsBoard'
+import {Statistics} from './Statistics/StatsBoard/StatsBoard'
 
 
 import {FriendListItem} from './Friends/FriendListItem/FriendListItem'
@@ -25,7 +25,7 @@ export const App = () => {
          stats={user.stats}
       />
       
-      <StatsBoard title="Upload stats" stats={data}/>
+      <Statistics title="Upload stats" stats={data}/>
       
 
       <FriendListItem friends={friends} />

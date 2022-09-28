@@ -3,7 +3,7 @@ import { Stats } from '../stats/Stats';
 import {StatsStatistics, TitleTitle} from './StatsBoard.styled'
 
 
-export const StatsBoard = ({title, stats }) => {
+export const Statistics = ({title, stats }) => {
     console.log(stats)
     return (
         <section class="statistics">
@@ -21,7 +21,7 @@ export const StatsBoard = ({title, stats }) => {
     </StatsStatistics></section>)
 }
 
-StatsBoard.propTypes = {
+Statistics.propTypes = {
     stats:  PropTypes.arrayOf(PropTypes.exact({
         id: PropTypes.string,
         label: PropTypes.string,
