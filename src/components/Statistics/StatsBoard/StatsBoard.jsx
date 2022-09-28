@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import { Stats } from '../stats/Stats';
-import {StatsStatistics} from './StatsBoard.styled'
+import {StatsStatistics, TitleTitle} from './StatsBoard.styled'
 
 
-export const StatsBoard = ({ stats }) => {
+export const StatsBoard = ({title, stats }) => {
     console.log(stats)
-    return <StatsStatistics className="statistics">
+    return (
+        <section class="statistics">
+            <TitleTitle class="title">{ title}</TitleTitle>
+        
+        <StatsStatistics className="statistics">
        
         {stats.map(({id, label, percentage}) => (
         <Stats
@@ -14,7 +18,7 @@ export const StatsBoard = ({ stats }) => {
                 percentage={percentage} />
             
         ))}
-    </StatsStatistics>
+    </StatsStatistics></section>)
 }
 
 StatsBoard.propTypes = {
